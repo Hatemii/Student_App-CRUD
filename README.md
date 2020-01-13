@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As students, we want to be able to register for many courses. But a course can also have many students. We have a many-to-many relationship, which requires a joiner model. We will call this joiner the enrollments model. For the purpose of this application, we will keep it to these three models.
 
-Things you may want to cover:
+Student -< Enrollment >- Course
+Deliverables
 
-* Ruby version
+Before generating our models and controllers, let us discuss our deliverables or goals for this app.
 
-* System dependencies
+1. Display all students in the database.
 
-* Configuration
+2. Add new students in the index.
 
-* Database creation
+3. Have a show page for each student.
 
-* Database initialization
+4. In the show page, the courses associated with the student are displayed.
 
-* How to run the test suite
+5. In the show page, we have the ability to update or delete the specific student.
 
-* Services (job queues, cache servers, search engines, etc.)
+6. Ability to register for a new course using form_for and collection_select by creating a new enrollment.
 
-* Deployment instructions
-
-* ...
+7. Ability to drop a course by deleting an enrollment.
