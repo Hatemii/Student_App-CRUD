@@ -1,0 +1,21 @@
+
+<h2>Student Profile</h2>
+
+<b>Name: </b><%= @student.name %><br>
+<b>Age: </b><%= @student.age %>
+
+
+<h3>Courses</h3>
+<%= link_to "Register Courses",new_enrollment_path %>
+
+<ul>
+  <% @student.enrollments.each do |enroll| %>
+    <li><%= enroll.course.name %></li>
+    <%= link_to "Drop enrollments",enroll,method: :delete,data:{confirm:"Are you sure"} %>
+  <% end %>
+</ul>
+
+<br>
+<br>
+<%= link_to "Edit", edit_student_path %> |
+<%= link_to "Delete",@student,method: :delete,data:{confirm: "Are you sure?"} %>

@@ -1,0 +1,13 @@
+<h2>Register for New course</h2>
+
+<%= form_for @enroll do |x| %>
+
+  <%= x.label :student_id %>
+  <%= x.collection_select :course_id,Course.all, :id,:name %>
+
+  <%= x.label :student_id %>
+  <%= x.collection_select :student_id,Student.all, :id,:name %>
+
+  <%= x.submit %>
+
+<% end %>

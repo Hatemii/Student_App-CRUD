@@ -1,0 +1,11 @@
+<h2>Students Index</h2>
+
+<%= link_to "Create new student", new_student_path %>
+
+
+<ul>
+  <% @students.each do |x| %>
+  <li><%= link_to x.name, x %></li><br />
+  <hr>
+  <% end %>
+</ul>

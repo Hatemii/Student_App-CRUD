@@ -1,0 +1,18 @@
+<h2>Edit Student</h2>
+
+<div>
+
+<%= form_for @student do |x| %>
+
+  <b><%= x.label :name %></b><br>
+  <%= x.text_field :name,placeholder:"enter name .." %><br>
+<b><%= x.label :age %></b><br>
+  <%= x.text_field :age, placeholder: "enter age .." %><br>
+
+  <br>
+
+  <%= x.submit %>
+
+<% end %>
+
+</div>
